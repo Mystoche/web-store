@@ -1,0 +1,2 @@
+# web-store
+pipeline deployment
