@@ -17,7 +17,7 @@ spec:
         - name: web-shop
           image: dulcinee/web-shop
           ports:
-            - containerPort: 8080
+            - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
@@ -29,6 +29,7 @@ spec:
     app: web-shop
   ports:
     - protocol: TCP
-      port: 8080
-      targetPort: 8080
-  type: LoadBalancer
+      port: 80
+      targetPort: 80
+      nodeType: 30001
+  type: NodeType
